@@ -9,7 +9,7 @@ const RenderCards = ({ data, title }) => {
 }
 
 const Home = () => {
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [allPosts, setAllPosts] = useState(null)
     const [searchText, setSearchText] = useState('')
 
@@ -37,12 +37,12 @@ const Home = () => {
                         <div className='grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3'>
                             {searchText ? (
                                 <RenderCards
-                                    data={[1,23]}
+                                    data={[]}
                                     title='No Search Results Found'
                                 />
                             ) : (
                                 <RenderCards
-                                    data={[1,23]}
+                                    data={[]}
                                     title='No Posts Found'
                                 />
                             )}
